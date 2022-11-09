@@ -17,10 +17,10 @@ public static class EnumProcessing
             return (Enum) classType.GetMethod(methodName)
                 .MakeGenericMethod(type).Invoke(null, arguments);
         }
-        catch (System.Reflection.TargetInvocationException e)
-        {
-            throw e.GetBaseException();
-        }
+        // catch (System.Reflection.TargetInvocationException e)
+        // {
+        //     throw e.GetBaseException();
+        // }
         catch (NullReferenceException e)
         {
             throw new InvalidOperationException("Please check the class type and method name inside this method", e);
