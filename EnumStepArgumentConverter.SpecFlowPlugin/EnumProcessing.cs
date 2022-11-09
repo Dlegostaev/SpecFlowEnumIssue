@@ -4,6 +4,8 @@ namespace EnumStepArgumentConverter.SpecFlowPlugin;
 
 public static class EnumProcessing
 {
+    // If you would like to copy this method to your project please review it attentively
+    // as it have been made by me just for quick reference that AsEnum<T> method is working correctly with plugin
     public static Enum ConvertStringToEnum(this string value, Type type)
     {
         var arguments = new object[] {value};
@@ -24,8 +26,10 @@ public static class EnumProcessing
             throw new InvalidOperationException("Please check the class type and method name inside this method", e);
         }
     }
-    
-    public static T AsEnum<T>(this string description) where T : System.Enum
+
+    // If you would like to copy this method to your project please review it attentively also,
+    // as it was copied from stackoverflow answer and wasn't reviewed by me
+    public static T AsEnum<T>(this string description) where T : Enum
     {
         foreach(var field in typeof(T).GetFields())
         {
