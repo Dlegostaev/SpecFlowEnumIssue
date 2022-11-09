@@ -1,4 +1,4 @@
-This project was made as a project to reproduce the issue:
+This project was made to reproduce the issue:
 https://github.com/SpecFlowOSS/SpecFlow/issues/2669
 
 In the **_plugin_** branch you can see current implementation of solution. If you would like to use it, please, pay attention to my comments and made a review of code you are copying, because it was not fully tested by me, and most of it was written just for PoC and for reference. Same statement is also applicable to the project structure and code styling.
